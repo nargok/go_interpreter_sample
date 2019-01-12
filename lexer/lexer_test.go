@@ -27,7 +27,7 @@ func TestNextToken(t *testing.T) {
 	l := New(input)
 
 	for i, tt := range tests {
-		tok := l.NextToken
+		tok := l.NextToken()
 
 		if tok.Type != tt.expectedType {
 			t.Fatalf("tests[%d] - toekntype worng. expected=%q, got=%q",
